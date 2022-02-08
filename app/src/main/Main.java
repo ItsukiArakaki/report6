@@ -3,8 +3,15 @@ import java.util.Scanner;
  
 public class Main {
  
+	/**
+	 * getPlayerAnswerメソッド、getCpuAnswerメソッド、isJudgeメソッドを呼び出しゲームを実行するメソッド
+	 * cpuが選んだ数値とplayerが選んだ数値が一致するまでゲームを繰り返し、一致したらゲームを終了する
+     * @param args
+     */
 	public static void main(String[] args) {
+
 		// cpuの答えを取得
+		
 		int cpuAnswer = getCpuAnswer();
  
 		while (true) {
@@ -25,13 +32,18 @@ public class Main {
 		}
 	}
  
-	// cpuの答えを返すメソッド
+	/**getCpuAnswerメソッド
+     * cpuの答えを返すメソッド
+     */
 	public static int getCpuAnswer() {
+
 		// 乱数を返す
 		return new Random().nextInt(100)+1;
 	}
- 
-	// playerが入力した数値を返すメソッド
+
+	/**getPlayerAnswerメソッド
+     * playerが入力した数値を返すメソッド
+     */
 	public static int getPlayerAnswer() {
 		int answer;
 		
@@ -50,8 +62,10 @@ public class Main {
 		}
 		return answer; // 入力された数値を返す
 	}
- 
-	// cpuの答えとplayerの答えが一致するかどうかを判定するメソッド
+
+	/**isJudgeメソッド
+    　* cpuの答えとplayerの答えが一致するかどうかを判定するメソッド
+    　*/
 	public static boolean isJudge(int cpu, int player) {
 	
 		if (cpu < player) { // 答えの方が小さい場合
