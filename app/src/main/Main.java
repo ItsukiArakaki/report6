@@ -49,12 +49,15 @@ public class Main {
 	public static boolean isJudge(int cpu, int player) {
 	
 		if (cpu < player) {
+			System.out.println("もっと小さな値です！");
 			return false;
 
 		} else if (cpu > player) {
+			System.out.println("もっと大きな値です！");
 			return false;
 
 		} else {
+			System.out.println("正解です！！おめでとう！！");
 			return true;
 		}
 	}
