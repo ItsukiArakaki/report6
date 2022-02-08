@@ -23,7 +23,7 @@ public class Main {
  
 
 	public static int getCpuAnswer() {
-		return 50;
+		return new Random().nextInt(100)+1;
 	}
  
 	
